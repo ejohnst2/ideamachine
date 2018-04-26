@@ -1,2 +1,10 @@
-<h1>Ideamachines#show</h1>
-<p>Find me in app/views/ideamachines/show.html.erb</p>
+<div class="container">
+  <h1>Ideamachines#show</h1>
+  <p>Find me in app/views/ideamachines/show.html.erb</p>
+
+  <%= simple_form_for Idea.new, url: ideas_create_path do |f| %>
+      <%= f.input :content %>
+      <!-- <h1> You will pay <%#= @ideamachine.price %> to submit</h1> -->
+      <%= f.button :submit %>
+  <% end %>
+</div>

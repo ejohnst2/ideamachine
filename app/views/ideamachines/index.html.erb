@@ -1,2 +1,17 @@
 <h1>Ideamachines#index</h1>
 <p>Find me in app/views/ideamachines/index.html.erb</p>
+
+<%= @ideamachines.each do |ideamachine| %>
+
+<div class="col-l-12 col-xs-12 col-sm-12">
+  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path experience.photos[0].path if experience.photos.any? %>');">
+    <div class="card-description">
+      <h1><%= ideamachine.user.name %></h1>
+    </div>
+    <div class="card-category">
+      <h3><%= ideamachine.price %></h3>
+    </div>
+  </div>
+</div>
+
+<% end %>
