@@ -1,2 +1,7 @@
 <h1>Ideas#create</h1>
 <p>Find me in app/views/ideas/create.html.erb</p>
+
+<%= simple_form_for(@idea) do |f| %>
+  <%= f.input :content %>
+  <%= f.button :submit %>
+<% end %>
